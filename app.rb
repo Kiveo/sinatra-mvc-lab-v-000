@@ -9,7 +9,7 @@ class App < Sinatra::Base
   post '/piglatinized' do
     #create a class instance of Model and pass user input to it
     @pig_input = PigLatinizer.new(params[:user_input])
-    erb :piglatinized
+    erb :pig_latinized
   end
 
 end
