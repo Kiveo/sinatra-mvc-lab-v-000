@@ -10,7 +10,7 @@ class App < Sinatra::Base
     #create a class instance of Model and pass user input to it
     @pig_latin = PigLatinizer.new(params[:user_input])
     #route to erb page that utilizes class instance and methods
-    erb :pig_latinized
+    erb :pig_latinize
   end
 
 end
