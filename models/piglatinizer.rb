@@ -12,7 +12,7 @@ class PigLatinizer
     #collect pig latin versions of words
     pig_words = words.map do |word|
       #find first vowel as an index of the array ([word] per iteration)
-      vowel_index = word.index("#{word.scan(/aeiouAEIOU/).first}") #first scanned vowel's index
+      vowel_index = word.index("#{word.scan(/[AEIOUaeiou]/).first}") #first scanned vowel's index
       #slice! deletes and returns deleted content
       removed_portion = word.slice!(0,vowel_index) #remove form start until vowel (can => c)
       #take remaining portion and add removed_portion to end + ay(way depending on if first letter == vowel)
