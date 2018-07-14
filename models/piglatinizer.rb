@@ -1,43 +1,21 @@
 class PigLatinizer
-  attr_reader :words
+  attr_reader :text
 
   def initialize
-    # @words = words
+    # @text = text
   end
 
-  def piglatinize(words)
-    @words = words
+  def piglatinize(text)
+    @text = text
+    #split text into an array of words
+    words = @text.split(" ")
+    #collect pig latin versions of words
+    pig_words = split_words.map do |word|
+      if word.slice(0,1) =~ (/AEIOUaeiou/)
+        word = word + "way"
+      else 
+    #put pig words together as spaced text    
+    pig_words.join(" ")
   end
-
+  
 end
-
-# class PigLatinizer
-#   attr_reader :text
-#
-#   def initialize
-#
-#   end
-#
-#   def piglatinize(text)
-#     @text = text
-#     aray = @text.split(" ")
-#     new_aray = aray.collect do |word|
-#       if word.slice(0,1) =~ (/[AEIOUaeiou]/)
-#         word = word + "way"
-#       else
-#         word = word.slice(1,word.length) + word.slice(0,1)
-#         if word.slice(0,1) =~ (/[aeiou]/)
-#           word = word + "ay"
-#         else
-#           word = word.slice(1,word.length) + word.slice(0,1)
-#           if word.slice(0,1) =~ (/[aeiou]/)
-#             word = word + "ay"
-#           else
-#             word = word.slice(1,word.length) + word.slice(0,1) + "ay"
-#           end
-#         end
-#       end
-#     end
-#    new_phrase = new_aray.join(" ")
-#   end
-# end
