@@ -11,11 +11,12 @@ class PigLatinizer
     words = @text.split(" ")
     #collect pig latin versions of words
     pig_words = split_words.map do |word|
-      if word.slice(0,1) =~ (/AEIOUaeiou/)
-        word = word + "way"
-      else 
-    #put pig words together as spaced text    
+      #find first vowel as an index of the array ([word] per iteration)
+      word.index("#{word.scan(/AEIOUaeiou/).first}") #first scanned vowel's index
+      #
+    end
+    #put pig words together as spaced text
     pig_words.join(" ")
   end
-  
+
 end
