@@ -5,5 +5,8 @@ class PigLatinizer
     @user_input = user_input
   end
 
+  def result
+    @user_input
+  end
 
 end
