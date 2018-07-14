@@ -7,7 +7,7 @@ class PigLatinizer
   end
 
   def piglatinize(words)
-    words
+    "Hello There"
   end
 
 end
