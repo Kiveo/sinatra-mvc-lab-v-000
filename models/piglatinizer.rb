@@ -5,8 +5,8 @@ class PigLatinizer
   #   @words = words
   # end
 
-  def result
-    @words
+  def piglatinize(words)
+    words
   end
 
 end
