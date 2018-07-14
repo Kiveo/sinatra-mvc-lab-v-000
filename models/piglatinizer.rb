@@ -3,21 +3,22 @@ class PigLatinizer
 
   def initialize(words)
     @words = words
+    self.piglatinize
   end
 
   def piglatinize(words)
-    @words = words
+    words
   end
 
 end
 
 # class PigLatinizer
 #   attr_reader :text
-# 
+#
 #   def initialize
-# 
+#
 #   end
-# 
+#
 #   def piglatinize(text)
 #     @text = text
 #     aray = @text.split(" ")
