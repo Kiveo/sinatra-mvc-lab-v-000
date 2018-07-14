@@ -17,7 +17,7 @@ class PigLatinizer
       removed_portion = word.slice!(0,vowel_index) #remove form start until vowel (can => c)
       #take remaining portion and add removed_portion to end + ay(way depending on if first letter == vowel)
       #ex1:egg=> eggway --ex2:dck => uck + d + ay => uckday
-
+      puts "#{vowel_index}"
       word << "#{removed_portion}#{"w" if vowel_index == 0}ay" #0 indicates first letter == vowel
     end
     #put pig words together as spaced text
